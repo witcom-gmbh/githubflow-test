@@ -1,11 +1,11 @@
 pipeline {
   agent { label 'maven' }
-  when {
-    changeRequest()
-    beforeAgent true
-  }  
   stages {
     stage('build') {
+      when {
+        changeRequest()
+        beforeAgent true
+      }  
       steps {
         sh 'echo Building ${BRANCH_NAME}...'
         dir ('./complete'){
