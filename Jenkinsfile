@@ -4,7 +4,8 @@ pipeline {
     stage('build') {
       steps {
         sh 'echo Building ${BRANCH_NAME}...'
-        sh 'cd ./complete'
+        sh 'ls -la'
+        sh 'cd ./complete && ls -la'
         sh 'mvn clean compile'
         sh 'mvn test'
       }
