@@ -1,5 +1,9 @@
 pipeline {
   agent { label 'maven' }
+  when {
+    changeRequest()
+    beforeAgent true
+  }  
   stages {
     stage('build') {
       steps {
