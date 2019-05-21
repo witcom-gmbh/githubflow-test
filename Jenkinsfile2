@@ -1,0 +1,15 @@
+def isPr() {
+    env.CHANGE_ID != null
+}
+
+pipeline {
+  agent { label 'master' }
+  stages {
+      stage('Init'){
+          steps {
+            echo 'Hello'
+            sh 'printenv'
+          }
+      }
+  }
+}
