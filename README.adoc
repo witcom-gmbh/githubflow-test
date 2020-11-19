@@ -12,6 +12,8 @@ a Maven build file, or a bundled up project as a zip file.
 == What you'll build
 You'll build a simple web application with Spring Boot and add some useful services to it.
 
+TEST
+
 == What you'll need
 
 :java_version: 1.8
